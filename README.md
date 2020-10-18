@@ -1,6 +1,4 @@
-# medical-emergency-flutter-node
-
-<h1 align = "Center">Women Safety App</h1>
+<h1 align = "Center">Medical Emergency</h1>
 
 
 ## Autumn of Open Source AOSS 2020
