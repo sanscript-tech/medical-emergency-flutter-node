@@ -1,5 +1,7 @@
 <h1 align = "Center">Medical Emergency - Flutter, NodeJS</h1>
 
+***In India, daily so many people dying because of lack of proper information about doctor/blood/medicine, we want to gather country wise medical information in a single application, where people can find their need in their location.***
+
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
