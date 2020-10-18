@@ -1,4 +1,4 @@
-<h1 align = "Center">Medical Emergency</h1>
+<h1 align = "Center">Medical Emergency - Flutter, NodeJS</h1>
 
 
 ## Autumn of Open Source AOSS 2020
