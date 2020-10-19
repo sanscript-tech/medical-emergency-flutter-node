@@ -10,7 +10,7 @@
 
 
 
-## Autumn of Open Source AOSS 2020
+## Autumn of Open Source AOS 2020
 <p align="center">
   <a href="https://sanscript.tech/">
     <img src="https://avatars3.githubusercontent.com/t/4187434?s=280&v=4" alt="Logo">
