@@ -78,16 +78,12 @@ class Dashboard extends StatelessWidget {
           children: [
             Image.asset('assets/images/logo.png'),
             Center(
-              child: Positioned(
-                top: device_height / 3,
-                left: 15.0,
-                child: Text(
-                  "Welcome to HelloDoc",
-                  style: TextStyle(
-                      fontFamily: "Roboto",
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.bold),
-                ),
+              child: Text(
+                "Welcome to HelloDoc",
+                style: TextStyle(
+                    fontFamily: "Roboto",
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             Center(
@@ -100,9 +96,10 @@ class Dashboard extends StatelessWidget {
                       children: [
                         SizedBox(height: device_height * .4),
                         Container(
-                          width: device_width/1.3,
+                          width: device_width / 1.3,
                           child: Text(
                             "Your one stop solution to all your emergency needs",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 15.0),
                           ),
