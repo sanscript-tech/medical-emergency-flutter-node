@@ -76,45 +76,54 @@ class Dashboard extends StatelessWidget {
         color: Color(0xFFFFE6E6),
         child: Stack(
           children: [
-            Positioned(
-              top: device_height / 3,
-              left: 15.0,
-              child: Text(
-                "Welcome to HelloDoc",
-                style: TextStyle(
-                    fontFamily: "Roboto",
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold),
+            Image.asset('assets/images/logo.png'),
+            Center(
+              child: Positioned(
+                top: device_height / 3,
+                left: 15.0,
+                child: Text(
+                  "Welcome to HelloDoc",
+                  style: TextStyle(
+                      fontFamily: "Roboto",
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ),
-            Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(height: device_height * .4),
-                      Text(
-                        "Your one stop solution to all your emergency \nneeds",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 15.0),
-                      ),
-                      SizedBox(height: 20),
-                      _createAccountButton(),
-                      SizedBox(height: 20),
-                      _signInButton(),
-                      SizedBox(height: 10),
-                      Text(
-                        "or",
-                        style: TextStyle(
-                            fontFamily: "Roboto", fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(height: 10),
-                      _googleSignInButton()
-                    ],
-                  ),
-                ))
+            Center(
+              child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(height: device_height * .4),
+                        Container(
+                          width: device_width/1.3,
+                          child: Text(
+                            "Your one stop solution to all your emergency needs",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 15.0),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        _createAccountButton(),
+                        SizedBox(height: 20),
+                        _signInButton(),
+                        SizedBox(height: 10),
+                        Text(
+                          "or",
+                          style: TextStyle(
+                              fontFamily: "Roboto",
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(height: 10),
+                        _googleSignInButton()
+                      ],
+                    ),
+                  )),
+            )
           ],
         ),
       ),
