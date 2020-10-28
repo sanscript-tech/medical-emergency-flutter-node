@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/dashboard_page.dart';
-import 'package:frontend/routes.dart';
 import 'pages/dashboard_page.dart';
+import 'routes.dart';
+
 //import 'package:frontend/pages/profile_page.dart';
 
 void main() {

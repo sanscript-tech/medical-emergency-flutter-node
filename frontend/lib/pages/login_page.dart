@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/reset_password.dart';
+import 'package:medicare/pages/reset_password.dart';
 import '../routes.dart';
 
 class LoginPage extends StatelessWidget {
@@ -159,7 +159,7 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 8),
                   GestureDetector(
                     onTap: () => Navigator.pushNamed(
-                        context, ResetPassword.resetPassword),
+                        context,ResetPassword.resetPassword),
                     child: RichText(
                         text: TextSpan(
                       text: "Forgot Password",
