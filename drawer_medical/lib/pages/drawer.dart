@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
+class SideDrawer extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _SideDrawerState createState() => _SideDrawerState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SideDrawerState extends State<SideDrawer> {
   List<String> texts = [
     'Home',
     'Report Emergency',
