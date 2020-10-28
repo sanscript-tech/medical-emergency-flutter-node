@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/routes.dart';
+
+import 'login_page.dart';
 
 class Dashboard extends StatelessWidget {
+  static final String dashboardId='/dashboard';
+
+
   @override
   Widget build(BuildContext context) {
     double device_height = MediaQuery.of(context).size.height;
@@ -27,7 +33,7 @@ class Dashboard extends StatelessWidget {
       return SizedBox(
         width: 250.0,
         child: RaisedButton(
-            onPressed: () => print("Login Button pressed"),
+            onPressed: () => Navigator.pushNamed(context, LoginPage.loginPageId),
             color: Colors.cyan.shade200,
             elevation: 10.0,
             shape: RoundedRectangleBorder(

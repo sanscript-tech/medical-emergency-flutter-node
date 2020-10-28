@@ -1,7 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:frontend/pages/reset_password.dart';
+import '../routes.dart';
+
 
 class LoginPage extends StatelessWidget {
+ 
+ static final String loginPageId='/login';
+
   @override
   Widget build(BuildContext context) {
     double device_height = MediaQuery.of(context).size.height;
@@ -153,15 +159,18 @@ class LoginPage extends StatelessWidget {
                         ]),
                   ),
                   SizedBox(height: 8),
-                  RichText(
-                      text: TextSpan(
-                          text: "Forgot Password",
-                          style: TextStyle(
-                              color: Colors.orange,
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () => print("Forgot Password"))),
+                  GestureDetector(
+                    onTap: () => Navigator.pushNamed(context, ResetPassword.resetPassword),
+                                      child: RichText(
+                        text: TextSpan(
+                            text: "Forgot Password",
+                            style: TextStyle(
+                                color: Colors.orange,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold),
+                           
+                                 )),
+                  ),
                   SizedBox(height: 20),
                   _avatar(),
                   SizedBox(height: 15),
