@@ -1,0 +1,29 @@
+name: medicare
+description: A new Flutter application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  font_awesome_flutter:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+     - assets/images/doctor.png
+     - assets/images/google.png
+     - assets/images/logo.png
+  fonts:
+     - family: Roboto
+       fonts:
+         - asset: assets/font/Roboto-Regular.ttf
+     - family: MyFlutterApp
+       fonts:
+         - asset: assets/font/MyFlutterApp.ttf
