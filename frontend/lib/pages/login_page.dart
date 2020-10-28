@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:frontend/pages/reset_password.dart';
 import '../routes.dart';
 
-
 class LoginPage extends StatelessWidget {
- 
- static final String loginPageId='/login';
+  static final String loginPageId = '/login';
 
   @override
   Widget build(BuildContext context) {
@@ -160,16 +158,16 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, ResetPassword.resetPassword),
-                                      child: RichText(
+                    onTap: () => Navigator.pushNamed(
+                        context, ResetPassword.resetPassword),
+                    child: RichText(
                         text: TextSpan(
-                            text: "Forgot Password",
-                            style: TextStyle(
-                                color: Colors.orange,
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold),
-                           
-                                 )),
+                      text: "Forgot Password",
+                      style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.bold),
+                    )),
                   ),
                   SizedBox(height: 20),
                   _avatar(),
