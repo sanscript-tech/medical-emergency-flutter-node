@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+FToast fToast;
 
 class ResetPassword extends StatefulWidget {
   static final String resetPassword = '/reset';
@@ -11,9 +14,16 @@ class ResetPassword extends StatefulWidget {
 class _ResetPasswordState extends State<ResetPassword> {
   final _formKey = GlobalKey<FormState>();
   String email;
-  static bool isVisible=false;
-  double visible=isVisible?1.0:0.0;
+
   final emailController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    fToast = FToast();
+    fToast.init(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,45 +109,49 @@ class _ResetPasswordState extends State<ResetPassword> {
                   color: Colors.blue[300],
                   textColor: Colors.white,
                   onPressed: () {
-                    if(_formKey.currentState.validate()){
-                      setState(() {
-                        isVisible=true;
-                      });
+                    if (_formKey.currentState.validate()) {
+                      _showToast();
                     }
-                    
                   },
                 )),
               ),
               SizedBox(
                 height: 40.0,
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 30.0,right: 30.0),
-                child: Opacity(opacity: visible,child:
-                Container(
-                  decoration:BoxDecoration(
-                    color:Colors.orange,
-                    borderRadius:BorderRadius.circular(20.0),
-                  ),
-                  padding: EdgeInsets.all(10.0),
-                  child:Column(
-                    children:<Widget>[
-                      Text('Password Reset Link has been',style: TextStyle(
-                        fontSize:20.0,
-                        color:Colors.white
-                      ),),
-                      Text('sent to your mail.Kindly Check',style: TextStyle(
-                        fontSize:20.0,
-                        color:Colors.white
-                      ),),
-                    ]
-                  ),
-                )),
-              )
             ]),
           ),
         ),
       ),
     );
   }
+}
+
+_showToast() {
+  Widget toast = Opacity(
+      opacity: 1.0,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.orange,
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        padding: EdgeInsets.all(10.0),
+        child: Column(children: <Widget>[
+          Text(
+            'Password Reset Link has been',
+            style: TextStyle(fontSize: 20.0, color: Colors.white),
+          ),
+          Text(
+            'sent to your mail.Kindly Check',
+            style: TextStyle(fontSize: 20.0, color: Colors.white),
+          ),
+        ]),
+      ));
+
+  // Custom Toast Position
+
+  fToast.showToast(
+    child: toast,
+    gravity: ToastGravity.BOTTOM,
+    toastDuration: Duration(seconds: 2),
+  );
 }

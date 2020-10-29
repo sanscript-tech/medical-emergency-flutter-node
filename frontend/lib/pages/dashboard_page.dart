@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/pages/login_page.dart';
 
-import 'login_page.dart';
 
 class Dashboard extends StatelessWidget {
   static final String dashboardId='/dashboard';
@@ -8,8 +8,8 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double device_height = MediaQuery.of(context).size.height;
-    double device_width = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
+    double deviceWidth = MediaQuery.of(context).size.width;
 
     Widget _createAccountButton() {
       return SizedBox(
@@ -32,7 +32,7 @@ class Dashboard extends StatelessWidget {
       return SizedBox(
         width: 250.0,
         child: RaisedButton(
-            onPressed: () => Navigator.pushNamed(context, LoginPage.loginPageId),
+            onPressed: () => Navigator.pushNamed(context,LoginPage.loginPageId),
             color: Colors.cyan.shade200,
             elevation: 10.0,
             shape: RoundedRectangleBorder(
@@ -47,7 +47,7 @@ class Dashboard extends StatelessWidget {
 
     Widget _googleSignInButton() {
       return SizedBox(
-        width: device_width / 1.5,
+        width: deviceWidth / 1.5,
         child: RaisedButton(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
@@ -99,9 +99,9 @@ class Dashboard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: device_height * .4),
+                        SizedBox(height: deviceHeight * .4),
                         Container(
-                          width: device_width / 1.3,
+                          width: deviceWidth / 1.3,
                           child: Text(
                             "Your one stop solution to all your emergency needs",
                             textAlign: TextAlign.center,

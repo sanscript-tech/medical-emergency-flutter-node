@@ -1,15 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:medicare/pages/reset_password.dart';
-import '../routes.dart';
 
 class LoginPage extends StatelessWidget {
   static final String loginPageId = '/login';
 
   @override
   Widget build(BuildContext context) {
-    double device_height = MediaQuery.of(context).size.height;
-    double device_width = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
+    double deviceWidth = MediaQuery.of(context).size.width;
 
     Widget _entryField(String title, {bool isPassword = false}) {
       return Container(
@@ -79,7 +78,7 @@ class LoginPage extends StatelessWidget {
 
     Widget _googleSignInButton() {
       return SizedBox(
-        width: device_width / 1.5,
+        width: deviceWidth / 1.5,
         child: RaisedButton(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
@@ -117,11 +116,11 @@ class LoginPage extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        height: device_height,
+        height: deviceHeight,
         child: Stack(children: [
           Positioned(
-            top: device_height / 10,
-            left: device_width / 15,
+            top: deviceHeight / 10,
+            left: deviceWidth / 15,
             child: Text(
               "Welcome Back...",
               style: TextStyle(fontSize: 25.0),
@@ -134,7 +133,7 @@ class LoginPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: device_height * .2),
+                  SizedBox(height: deviceHeight * .2),
                   _emailPasswordWidget(),
                   SizedBox(height: 20),
                   _loginButton(),
