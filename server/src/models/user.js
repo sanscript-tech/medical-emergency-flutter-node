@@ -50,7 +50,7 @@ userSchema.methods.toJSON = function() {
 
 // creates and saves a jwt token to the user record and returns the token
 userSchema.methods.generateAuthToken = async function() {                     
-  const token = jwt.sign({_id: this._id.toString() }, process.env.JWT_SECRET, {
+  const token = jwt.sign({_id: this._id }, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRES_IN,
   })
 

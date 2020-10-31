@@ -10,15 +10,14 @@ router.get("/", function (req, res, next) {
 });
 
 router.post("/login", async (req,res) => {
-  const user = new User(req.body)
-    try{
-        await user.save();
-        const token = await user.generateAuthToken();
-        const filtered_user = user.toJSON();
-        res.status(201).json({msg: "You have been logged in successfully",user:filtered_user, token});
-    }catch(e){
-        res.status(400).send({ errors: [{msg: "Unable to login"}] });
-    } 
+  try{
+    const user = await User.findByCredentials(req.body.email, req.body.password);
+    const token = await user.generateAuthToken();
+    res.send({msg: "You have been logged in successfully", user: user.toJSON() , token});
+  }catch(e){
+      console.log(e);
+      res.status(400).send({ errors: [{msg: "Unable to login"}] });
+  }
 })
 
 module.exports = router;
