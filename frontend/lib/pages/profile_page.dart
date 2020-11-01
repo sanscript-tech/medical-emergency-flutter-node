@@ -497,7 +497,33 @@ class _ProfilePageState extends State<ProfilePage> {
                       padding: const EdgeInsets.only(top: 15.0),
                       child: recentPurchases(),
                     ),
-                    
+                    Padding(
+                      padding:
+                          EdgeInsets.only(right: device_width / 2.5, top: 16.0),
+                      child: Text(
+                        "Frequently Contacted",
+                        style: TextStyle(
+                            fontFamily: "Roboto",
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsets.only(top: 12.0, right: device_width / 1.4),
+                      child: Text(
+                        "Doctors",
+                        style: TextStyle(
+                            fontSize: 18.0,
+                            fontFamily: "Roboto",
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black38),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0),
+                      child: frequentlyContacted(),
+                    ),
                   ],
                 ),
               ),
