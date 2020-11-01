@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 // Importing db connection
-const dbConnection = require("./db/mongoose");
+const dbConnection = require("../../config/database");
 // db Connectivity
 dbConnection();
 

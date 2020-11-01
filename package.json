@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon server/src/server.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -12,5 +14,8 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
