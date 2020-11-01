@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/constants/color.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -246,6 +247,109 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
+  Widget recentPurchases() {
+    return Container(
+      height: 100,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 6,
+        itemBuilder: (BuildContext context, int i) => Padding(
+          padding: EdgeInsets.only(left: 12.0),
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            elevation: 6.0,
+            color: Colors.grey.shade200,
+            child: Container(
+              width: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SvgPicture.asset('assets/images/med.svg'),
+                  Text(
+                    "Name",
+                    style: TextStyle(
+                        fontFamily: "Roboto", fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget frequentlyContacted() {
+    return Container(
+      height: 100,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 6,
+        itemBuilder: (BuildContext context, int i) => Padding(
+          padding: EdgeInsets.only(left: 12.0),
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            elevation: 6.0,
+            color: Colors.grey.shade200,
+            child: Container(
+              width: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SvgPicture.asset('assets/images/doc.svg'),
+                  Text(
+                    "Dr. Sharma",
+                    style: TextStyle(
+                        fontFamily: "Roboto", fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget hospitals() {
+    return Container(
+      height: 100,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 6,
+        itemBuilder: (BuildContext context, int i) => Padding(
+          padding: EdgeInsets.only(left: 12.0),
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            elevation: 6.0,
+            color: Colors.grey.shade200,
+            child: Container(
+              width: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SvgPicture.asset('assets/images/hospital.svg'),
+                  Text(
+                    "General Hospital",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: "Roboto", fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     double device_height = MediaQuery.of(context).size.height;
@@ -262,7 +366,7 @@ class _ProfilePageState extends State<ProfilePage> {
         centerTitle: true,
       ),
       drawer: Drawer(),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Padding(
@@ -372,12 +476,30 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
-            Container(
-              color: Colors.redAccent.shade100,
-              child: Column(
-                children: [
-                  
-                ],
+            Padding(
+              padding: EdgeInsets.only(top: 16.0),
+              child: Container(
+                color: Color(0xFFFFE6E6),
+                width: double.infinity,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: device_width / 2),
+                      child: Text(
+                        "Recent Purchases",
+                        style: TextStyle(
+                            fontFamily: "Roboto",
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0),
+                      child: recentPurchases(),
+                    ),
+                    
+                  ],
+                ),
               ),
             )
           ],
