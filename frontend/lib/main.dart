@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/pages/hospital_details.dart';
 import 'pages/dashboard_page.dart';
 import 'pages/profile_page.dart';
 import 'routes.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: ProfilePage(),
+      home: HospitalDetails(),
       debugShowCheckedModeBanner: false,
       initialRoute: Dashboard.dashboardId,
       routes: routes,

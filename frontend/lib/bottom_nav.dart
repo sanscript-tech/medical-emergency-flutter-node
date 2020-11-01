@@ -7,6 +7,7 @@ import 'hospital.dart';
 
 //this page contains a common bottom navigation bar for all the pages.
 class BottomNav extends StatefulWidget {
+  static final String bottomNav='/bottom';
   @override
   _BottomNavState createState() => _BottomNavState();
 }
