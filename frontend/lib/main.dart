@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/dashboard_page.dart';
-import 'package:frontend/pages/profile_page.dart';
+import 'pages/dashboard_page.dart';
+import 'pages/profile_page.dart';
+import 'routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,8 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home: ProfilePage(),
       debugShowCheckedModeBanner: false,
+      initialRoute: Dashboard.dashboardId,
+      routes: routes,
     );
   }
 }
-
-
