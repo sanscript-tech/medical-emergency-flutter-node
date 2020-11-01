@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/bottom_nav.dart';
-import 'package:medicare/pages/login_page.dart';
 
 void main() => runApp(MyApp());
 

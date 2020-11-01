@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
-  font_awesome_flutter:
+  auto_size_text:
 
 dev_dependencies:
   flutter_test:

@@ -4,7 +4,6 @@ import 'home.dart';
 import 'shop.dart';
 import 'doctor.dart';
 import 'hospital.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 //this page contains a common bottom navigation bar for all the pages.
 class BottomNav extends StatefulWidget {
@@ -30,7 +29,7 @@ class _BottomNavState extends State<BottomNav> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: new FaIcon(
+              child: new Icon(
                 MyFlutterApp.home,
                 color: Colors.orange.shade50,
                 size: 25.0,
@@ -50,7 +49,7 @@ class _BottomNavState extends State<BottomNav> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: FaIcon(
+              child: Icon(
                 MyFlutterApp.hospital,
                 color: Colors.orange.shade50,
                 size: 25.0,
@@ -70,7 +69,7 @@ class _BottomNavState extends State<BottomNav> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: FaIcon(
+              child: Icon(
                 MyFlutterApp.doctor,
                 color: Colors.orange.shade50,
                 size: 25.0,
@@ -90,7 +89,7 @@ class _BottomNavState extends State<BottomNav> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: FaIcon(
+              child: Icon(
                 MyFlutterApp.medicine,
                 color: Colors.orange.shade50,
                 size: 25.0,
