@@ -524,6 +524,21 @@ class _ProfilePageState extends State<ProfilePage> {
                       padding: const EdgeInsets.only(top: 15.0),
                       child: frequentlyContacted(),
                     ),
+                    Padding(
+                      padding:
+                          EdgeInsets.only(right: device_width / 1.5, top: 16.0),
+                      child: Text(
+                        "Hospitals",
+                        style: TextStyle(
+                            fontFamily: "Roboto",
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, bottom: 25.0),
+                      child: hospitals(),
+                    ),
                   ],
                 ),
               ),
