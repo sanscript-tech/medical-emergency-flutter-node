@@ -123,7 +123,7 @@ Soon we will be merging all your changes into the master branch of this project.
 
 ## How to run the server locally ? 
 
-To start the server be in the root level of the repository and run the following command:
+To start the server be in the server folder of the repository and run the following command:
 
 ```
 npm start
