@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/dashboard_page.dart';
-import 'pages/profile_page.dart';
+import 'package:medicare/bottom_nav.dart';
 import 'routes.dart';
 
 void main() {
@@ -13,9 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: ProfilePage(),
+      home: BottomNav(),
       debugShowCheckedModeBanner: false,
-      initialRoute: Dashboard.dashboardId,
+      //initialRoute: Dashboard.dashboardId,
       routes: routes,
     );
   }
