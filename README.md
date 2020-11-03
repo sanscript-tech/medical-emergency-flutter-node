@@ -121,3 +121,18 @@ Now submit the pull request.
 
 Soon we will be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
 
+## How to run the server locally ? 
+
+To start the server be in the server folder of the repository and run the following command:
+
+```
+npm start
+```
+
+The server restarts whenever a new change is saved, but to do it manually run the following command:
+
+```
+RS
+```
+
+

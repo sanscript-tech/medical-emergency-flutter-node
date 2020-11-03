@@ -1,0 +1,52 @@
+name: medicare
+description: A new Flutter application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  flutter_svg: ^0.19.1
+  email_validator: '^1.0.5'
+  fluttertoast: ^7.1.1
+  font_awesome_flutter:
+  auto_size_text:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+     - assets/images/doctor.png
+     - assets/images/google.png
+     - assets/images/logo.png
+     - assets/images/doc.svg
+     - assets/images/med.svg
+     - assets/images/hospital.svg
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+     - family: Roboto
+       fonts:
+         - asset: assets/font/Roboto-Regular.ttf
+     - family: MyFlutterApp
+       fonts:
+         - asset: assets/font/MyFlutterApp.ttf
+
+
+        
