@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -13,5 +15,8 @@
     "mongoose": "^5.10.10",
     "morgan": "~1.9.1",
     "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
