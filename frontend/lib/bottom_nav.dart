@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/icons/icons.dart';
+import 'package:medicare/pages/shop.dart';
 import 'home.dart';
-import 'shop.dart';
 import 'doctor.dart';
 import 'hospital.dart';
 
@@ -23,7 +23,7 @@ class _BottomNavState extends State<BottomNav> {
       body: _tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.orange,
+        backgroundColor: Color(0xFFE37C54),
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
