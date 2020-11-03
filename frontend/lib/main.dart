@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: EmergencySearch(),
+      home: HospitalDetails(),
       debugShowCheckedModeBanner: false,
       //initialRoute: Dashboard.dashboardId,
       routes: routes,
