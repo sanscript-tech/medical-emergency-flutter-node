@@ -7,7 +7,9 @@ const userProfileSchema = new mongoose.Schema(
       ref: "user",
       required: true,
     },
-
+    isDoctor: {
+      type: Boolean,
+    },
     purchases: [
       {
         purchase: {
