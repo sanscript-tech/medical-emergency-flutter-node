@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MedicineDetailPage extends StatelessWidget {
+class Shop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

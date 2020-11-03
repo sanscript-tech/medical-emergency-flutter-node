@@ -11,7 +11,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.orange,
+        backgroundColor: Color(0xFFE37C54),
         leading: GestureDetector(
           onTap: () {},
           child: Padding(
