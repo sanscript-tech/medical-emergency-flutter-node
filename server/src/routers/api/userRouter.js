@@ -33,6 +33,15 @@ router.post("/login" , async(req,res)=>{
   }
 })
 
+router.get("/profile", async(req,res)=> {
+  try{
+    var users = await User.find({}, {_id:1, name: 1, email: 1, phoneNo: 1, Address: 1, createdAt: 1});
+    res.send({users})
+  }catch(e){
+    console.log(e)
+    res.status(400).send({ errors: [{msg: e.message}] });
+  }
+})
 
 // @route   GET api/users
 // @desc    Get yourself
