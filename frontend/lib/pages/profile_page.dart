@@ -38,10 +38,10 @@ class _ProfilePageState extends State<ProfilePage> {
     super.dispose();
   }
 
-  Widget _editNameTextField(double device_width) {
+  Widget _editNameTextField(double deviceWidth) {
     if (_isEditingNameText)
       return Container(
-        width: device_width,
+        width: deviceWidth,
         child: TextField(
           decoration: InputDecoration(
             contentPadding: EdgeInsets.all(0.0),
@@ -63,7 +63,7 @@ class _ProfilePageState extends State<ProfilePage> {
           });
         },
         child: Container(
-          width: device_width,
+          width: deviceWidth,
           padding: EdgeInsets.only(
               bottom: 3, left: 4 // space between underline and text
               ),
@@ -82,10 +82,10 @@ class _ProfilePageState extends State<ProfilePage> {
         ));
   }
 
-  Widget _editEmailTextField(double device_width) {
+  Widget _editEmailTextField(double deviceWidth) {
     if (_isEditingEmailText)
       return Container(
-        width: device_width,
+        width: deviceWidth,
         child: TextField(
           decoration: InputDecoration(
             contentPadding: EdgeInsets.all(0.0),
@@ -107,7 +107,7 @@ class _ProfilePageState extends State<ProfilePage> {
           });
         },
         child: Container(
-          width: device_width,
+          width: deviceWidth,
           padding: EdgeInsets.only(
               bottom: 3, left: 4 // space between underline and text
               ),
@@ -126,10 +126,10 @@ class _ProfilePageState extends State<ProfilePage> {
         ));
   }
 
-  Widget _editPhoneTextField(double device_width) {
+  Widget _editPhoneTextField(double deviceWidth) {
     if (_isEditingPhoneNumber)
       return Container(
-        width: device_width,
+        width: deviceWidth,
         child: TextField(
           decoration: InputDecoration(
             contentPadding: EdgeInsets.all(0.0),
@@ -151,7 +151,7 @@ class _ProfilePageState extends State<ProfilePage> {
           });
         },
         child: Container(
-          width: device_width,
+          width: deviceWidth,
           padding: EdgeInsets.only(
               bottom: 3, left: 4 // space between underline and text
               ),
@@ -170,10 +170,10 @@ class _ProfilePageState extends State<ProfilePage> {
         ));
   }
 
-  Widget _editAddressTextField(double device_width) {
+  Widget _editAddressTextField(double deviceWidth) {
     if (_isEditingAddressText)
       return Container(
-        width: device_width,
+        width: deviceWidth,
         child: TextField(
           decoration: InputDecoration(
             contentPadding: EdgeInsets.all(0.0),
@@ -195,7 +195,7 @@ class _ProfilePageState extends State<ProfilePage> {
           });
         },
         child: Container(
-          width: device_width,
+          width: deviceWidth,
           padding: EdgeInsets.only(
               bottom: 3, left: 4 // space between underline and text
               ),
@@ -351,8 +351,8 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    double device_height = MediaQuery.of(context).size.height;
-    double device_width = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
+    double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFE37C54),
@@ -384,7 +384,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(
-                          top: device_height / 25, left: device_width / 10),
+                          top: deviceHeight / 25, left: deviceWidth / 10),
                       child: Row(
                         children: [
                           Text(
@@ -395,15 +395,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                 fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
-                            width: device_width / 4.6,
+                            width: deviceWidth / 4.6,
                           ),
-                          _editNameTextField(device_width / 2),
+                          _editNameTextField(deviceWidth / 2),
                         ],
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(
-                          top: device_height / 25, left: device_width / 10),
+                          top: deviceHeight / 25, left: deviceWidth / 10),
                       child: Row(
                         children: [
                           Text(
@@ -414,15 +414,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                 fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
-                            width: device_width / 4.6,
+                            width: deviceWidth / 4.6,
                           ),
-                          _editEmailTextField(device_width / 2),
+                          _editEmailTextField(deviceWidth / 2),
                         ],
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(
-                          top: device_height / 25, left: device_width / 10),
+                          top: deviceHeight / 25, left: deviceWidth / 10),
                       child: Row(
                         children: [
                           Text(
@@ -433,15 +433,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                 fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
-                            width: device_width / 5,
+                            width: deviceWidth / 5,
                           ),
-                          _editPhoneTextField(device_width / 2),
+                          _editPhoneTextField(deviceWidth / 2),
                         ],
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(
-                          top: device_height / 25, left: device_width / 10),
+                          top: deviceHeight / 25, left: deviceWidth / 10),
                       child: Row(
                         children: [
                           Text(
@@ -452,20 +452,20 @@ class _ProfilePageState extends State<ProfilePage> {
                                 fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
-                            width: device_width / 6.2,
+                            width: deviceWidth / 6.2,
                           ),
-                          _editAddressTextField(device_width / 2),
+                          _editAddressTextField(deviceWidth / 2),
                         ],
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(
-                          top: device_height / 25, left: device_width / 7),
+                          top: deviceHeight / 25, left: deviceWidth / 7),
                       child: Row(
                         children: [
                           _saveButton(),
                           SizedBox(
-                            width: device_width / 5,
+                            width: deviceWidth / 5,
                           ),
                           _cancelButton()
                         ],
@@ -483,7 +483,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(right: device_width / 2),
+                      padding: EdgeInsets.only(right: deviceWidth / 2),
                       child: Text(
                         "Recent Purchases",
                         style: TextStyle(
@@ -498,7 +498,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsets.only(right: device_width / 2.5, top: 16.0),
+                          EdgeInsets.only(right: deviceWidth / 2.5, top: 16.0),
                       child: Text(
                         "Frequently Contacted",
                         style: TextStyle(
@@ -509,7 +509,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsets.only(top: 12.0, right: device_width / 1.4),
+                          EdgeInsets.only(top: 12.0, right: deviceWidth / 1.4),
                       child: Text(
                         "Doctors",
                         style: TextStyle(
@@ -525,7 +525,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsets.only(right: device_width / 1.5, top: 16.0),
+                          EdgeInsets.only(right: deviceWidth / 1.5, top: 16.0),
                       child: Text(
                         "Hospitals",
                         style: TextStyle(
