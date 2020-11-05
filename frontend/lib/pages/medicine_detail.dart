@@ -23,8 +23,8 @@ class Shop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double device_width = MediaQuery.of(context).size.width;
-    double device_height = MediaQuery.of(context).size.height;
+    double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -40,7 +40,7 @@ class Shop extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                    top: device_height / 20, left: device_width / 12),
+                    top: deviceHeight / 20, left: deviceWidth / 12),
                 child: Row(
                   children: [
                     SvgPicture.asset(
@@ -48,7 +48,7 @@ class Shop extends StatelessWidget {
                       width: 75,
                       height: 75,
                     ),
-                    SizedBox(width: device_width / 10),
+                    SizedBox(width: deviceWidth / 10),
                     Column(
                       children: [
                         Text(
@@ -71,29 +71,29 @@ class Shop extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: device_height / 25),
+                padding: EdgeInsets.only(top: deviceHeight / 25),
                 child: Container(
                   color: Color(0xFFFFE6E6),
                   width: double.infinity,
-                  height: device_height / 1.58,
+                  height: deviceHeight / 1.58,
                   child: Padding(
                     padding: EdgeInsets.only(
-                        top: device_height / 25, left: device_width / 15),
+                        top: deviceHeight / 25, left: deviceWidth / 15),
                     child: Column(
                       children: [
                         Row(
                           children: [
                             essentialInfo("Mfg. Date", "10-09-2018"),
-                            SizedBox(width: device_width / 10),
+                            SizedBox(width: deviceWidth / 10),
                             essentialInfo("Exp. Date", "20-10-2021"),
-                            SizedBox(width: device_width / 10),
+                            SizedBox(width: deviceWidth / 10),
                             essentialInfo("Cost", "Rs. 150"),
                           ],
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: device_height / 25,
-                              right: device_width / 4.4),
+                              top: deviceHeight / 25,
+                              right: deviceWidth / 4.4),
                           child: Text(
                             "Description and Specifications",
                             style: TextStyle(
@@ -104,7 +104,7 @@ class Shop extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Container(
-                          width: device_width / 1.1,
+                          width: deviceWidth / 1.1,
                           child: Text(
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
                                 " Sed hendrerit elementum eros. Duis euismod purus malesuada enim fermentum posuere." +
@@ -131,8 +131,8 @@ class Shop extends StatelessWidget {
             decoration: BoxDecoration(
                 border:
                     Border(right: BorderSide(color: Colors.black, width: 2.0))),
-            width: device_width / 2,
-            height: device_height / 20,
+            width: deviceWidth / 2,
+            height: deviceHeight / 20,
             child: RaisedButton(
               color: AppTheme.aqua,
               onPressed: () => print("Added to cart"),
@@ -146,8 +146,8 @@ class Shop extends StatelessWidget {
             ),
           ),
           Container(
-            width: device_width / 2,
-            height: device_height / 20,
+            width: deviceWidth / 2,
+            height: deviceHeight / 20,
             child: RaisedButton(
               color: AppTheme.aqua,
               onPressed: () => print("Buy Now"),

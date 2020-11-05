@@ -1,16 +1,14 @@
 <h1 align = "Center">Medical Emergency - Flutter, NodeJS</h1>
 
-***In India, daily so many people dying because of lack of proper information about doctor/blood/medicine, we want to gather country wise medical information in a single application, where people can find their need in their location.***
+**_In India, daily so many people dying because of lack of proper information about doctor/blood/medicine, we want to gather country wise medical information in a single application, where people can find their need in their location._**
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
 
-
-
-
 ## Autumn of Open Source AOS 2020
+
 <p align="center">
   <a href="https://sanscript.tech/">
     <img src="https://avatars3.githubusercontent.com/t/4187434?s=280&v=4" alt="Logo">
@@ -18,21 +16,19 @@
   
 Autumn of Open Source, 2020, is an Open Source Program organized by [**Sanscript India**](https://sanscript.tech) to spread awareness and promote the culture of Open Source Projects development among beginners and youth. The program will continue for a month in which all participants will contribute at their level of expertise. There will be highly skilled and experienced **Project Leaders*** and **Mentors** who will guide participants to contribute to Open Source Projects. In the end, participants who have performed well, will be announced as **winners**, and **rewards** will be distributed, including **internship** opportunities.
 
- ## Overview 🎃
-  This project is mainly ensured to build in an open source community to help the people of our country grow and develop themselves.
+## Overview 🎃
+
+This project is mainly ensured to build in an open source community to help the people of our country grow and develop themselves.
 
 ## Tech stacks used 🛴
 
 **Flutter, NodeJS**
 
- ### This project is under AOS 2020 (Autumn open source program) under Sanscript, India .🎉🎊
+### This project is under AOS 2020 (Autumn open source program) under Sanscript, India .🎉🎊
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-
-
- ## How to start ? 🎪
-
+## How to start ? 🎪
 
 #### If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
 
@@ -53,15 +49,11 @@ git clone "url you just copied"
 
 where "url you just copied" (without the quotation marks) is the url to this repository (your fork of this project). See the previous steps to obtain the url.
 
-
 For example:
 
 ```
-git clone https://github.com/sanscript-tech/hacking-tools-scripts
+git clone https://github.com/sanscript-tech/medical-emergency-flutter-node
 ```
-
-
-
 
 ## Create a branch ⚓
 
@@ -121,11 +113,11 @@ Now submit the pull request.
 
 Soon we will be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
 
-## How to run the server locally ? 
-
-To start the server be in the server folder of the repository and run the following command:
+## How to run the server locally ?
 
 ```
+cd server
+npm install
 npm start
 ```
 
@@ -134,5 +126,3 @@ The server restarts whenever a new change is saved, but to do it manually run th
 ```
 RS
 ```
-
-
