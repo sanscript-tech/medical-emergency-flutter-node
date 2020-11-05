@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/icons/icons.dart';
 import 'home.dart';
-import 'shop.dart';
-import 'doctor.dart';
-import 'hospital.dart';
+import 'hospital_search.dart';
+import 'doctor_search.dart';
+import 'medicine_search.dart';
 
 //this page contains a common bottom navigation bar for all the pages.
 class BottomNav extends StatefulWidget {
@@ -28,11 +28,11 @@ class _BottomNavState extends State<BottomNav> {
         items: [
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 5.0),
               child: new Icon(
                 MyFlutterApp.home,
                 color: Colors.orange.shade50,
-                size: 25.0,
+                size: 30.0,
               ),
             ),
             title: Padding(
@@ -41,18 +41,18 @@ class _BottomNavState extends State<BottomNav> {
                 'Home',
                 style: TextStyle(
                   color: Colors.orange.shade50,
-                  fontSize: 15,
+                  fontSize: 17,
                 ),
               ),
             ),
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 5.0),
               child: Icon(
                 MyFlutterApp.hospital,
                 color: Colors.orange.shade50,
-                size: 25.0,
+                size: 30.0,
               ),
             ),
             title: Padding(
@@ -61,18 +61,18 @@ class _BottomNavState extends State<BottomNav> {
                 "Hospital",
                 style: TextStyle(
                   color: Colors.orange.shade50,
-                  fontSize: 15,
+                  fontSize: 17,
                 ),
               ),
             ),
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 5.0),
               child: Icon(
                 MyFlutterApp.doctor,
                 color: Colors.orange.shade50,
-                size: 25.0,
+                size: 30.0,
               ),
             ),
             title: Padding(
@@ -81,18 +81,18 @@ class _BottomNavState extends State<BottomNav> {
                 "Doctor",
                 style: TextStyle(
                   color: Colors.orange.shade50,
-                  fontSize: 15,
+                  fontSize: 17,
                 ),
               ),
             ),
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 5.0),
               child: Icon(
                 MyFlutterApp.medicine,
                 color: Colors.orange.shade50,
-                size: 25.0,
+                size: 30.0,
               ),
             ),
             title: Padding(
@@ -101,7 +101,7 @@ class _BottomNavState extends State<BottomNav> {
                 "Shop",
                 style: TextStyle(
                   color: Colors.orange.shade50,
-                  fontSize: 15,
+                  fontSize: 17,
                 ),
               ),
             ),

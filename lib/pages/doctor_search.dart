@@ -99,93 +99,109 @@ class _DoctorState extends State<Doctor> {
             ),
           ],
         ),
-        height: 150.0,
         width: width,
         child: Padding(
           padding: const EdgeInsets.only(top: 10.0),
-          child: Row(
+          child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 8.0,
-                  right: 8.0,
-                ),
-                child: Image.asset(
-                  'assets/images/doctor.png',
-                  height: 100,
-                  width: 70,
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Row(
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 8.0,
+                      right: 8.0,
+                    ),
+                    child: Image.asset(
+                      'assets/images/doctor.png',
+                      height: 100,
+                      width: 100,
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      Text(
-                        "Dr. Sharma",
-                        style: TextStyle(
-                          fontFamily: 'Roboto',
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      Row(
+                        children: <Widget>[
+                          Text(
+                            "Dr. Sharma",
+                            style: TextStyle(
+                              fontFamily: 'Roboto',
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(
-                        width: 10.0,
+                        height: 10.0,
                       ),
-                      _appointment(),
+                      Row(
+                        children: <Widget>[
+                          AutoSizeText(
+                            'Child Specialists',
+                            style: TextStyle(
+                              color: Colors.grey.shade800,
+                              fontSize: 18,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Text(
+                            "Credits:",
+                            style: TextStyle(
+                              fontFamily: "Roboto",
+                              fontSize: 18.0,
+                              fontStyle: FontStyle.italic,
+                              color: Colors.grey.shade800,
+                            ),
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber[800],
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber[800],
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber[800],
+                          ),
+                          Icon(
+                            Icons.star_border,
+                          ),
+                          Icon(
+                            Icons.star_border,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
                     ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      AutoSizeText(
-                        'Child\nSpecialists',
-                        style: TextStyle(
-                          color: Colors.grey.shade800,
-                          fontSize: 18,
-                        ),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      SizedBox(width: 17.0),
-                      _consult(),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Text(
-                        "Credits:",
-                        style: TextStyle(
-                          fontFamily: "Roboto",
-                          fontSize: 18.0,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.grey.shade800,
-                        ),
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.amber[800],
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.amber[800],
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.amber[800],
-                      ),
-                      Icon(
-                        Icons.star_border,
-                      ),
-                      Icon(
-                        Icons.star_border,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.0,
                   ),
                 ],
               ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  _appointment(),
+                  SizedBox(
+                    width: 7.0,
+                  ),
+                  _consult(),
+                ],
+              ),
+              SizedBox(height: 15.0),
             ],
           ),
         ),
