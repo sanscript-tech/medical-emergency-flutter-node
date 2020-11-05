@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/bottom_nav.dart';
+import 'package:medicare/pages/bottom_nav.dart';
 
 void main() => runApp(MyApp());
 
