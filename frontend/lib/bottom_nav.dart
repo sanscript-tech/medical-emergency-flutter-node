@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medicare/icons/icons.dart';
 import 'package:medicare/pages/shop.dart';
 import 'home.dart';
-import 'doctor.dart';
+import 'pages/doctor.dart';
 import 'hospital.dart';
 
 //this page contains a common bottom navigation bar for all the pages.
