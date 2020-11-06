@@ -86,7 +86,12 @@ class _DoctorState extends State<Doctor> {
 //Doctor card
   Widget _doctor(double width) {
     return Padding(
-      padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.only(
+        left: 25.0,
+        right: 25.0,
+        top: 20.0,
+        bottom: 10.0,
+      ),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
