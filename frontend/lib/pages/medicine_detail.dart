@@ -42,6 +42,7 @@ class Shop extends StatelessWidget {
                 padding: EdgeInsets.only(
                     top: deviceHeight / 20, left: deviceWidth / 12),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     SvgPicture.asset(
                       'assets/images/med.svg',
@@ -78,10 +79,14 @@ class Shop extends StatelessWidget {
                   height: deviceHeight / 1.58,
                   child: Padding(
                     padding: EdgeInsets.only(
-                        top: deviceHeight / 25, left: deviceWidth / 15),
+                      top: deviceHeight / 25,
+                      left: deviceWidth / 15,
+                      right: 20.0,
+                    ),
                     child: Column(
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             essentialInfo("Mfg. Date", "10-09-2018"),
                             SizedBox(width: deviceWidth / 10),
@@ -92,8 +97,7 @@ class Shop extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: deviceHeight / 25,
-                              right: deviceWidth / 4.4),
+                              top: deviceHeight / 25, right: deviceWidth / 4.4),
                           child: Text(
                             "Description and Specifications",
                             style: TextStyle(

@@ -24,8 +24,8 @@ class DoctorDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double device_height = MediaQuery.of(context).size.height;
-    double device_width = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
+    double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFE37C54),
@@ -38,54 +38,65 @@ class DoctorDetailsPage extends StatelessWidget {
           Center(
             child: SvgPicture.asset(
               'assets/images/doc.svg',
-              height: device_height / 4.5,
+              height: deviceHeight / 3.5,
             ),
           ),
           Container(
             color: Color(0xFFFFE6E6),
-            height: device_height / 1.85,
+            height: deviceHeight / 1.85,
             width: double.infinity,
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(right: device_width / 1.6, top: 8),
-                  child: Text(
-                    "Dr. Sharma",
-                    style: TextStyle(
-                        fontFamily: "Roboto",
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
+                  padding: EdgeInsets.only(
+                    top: 10,
+                    left: 20.0,
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(right: device_width / 1.6),
-                  child: Text(
-                    "Child Specialist",
-                    style: TextStyle(
-                        fontFamily: "Roboto",
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black45),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: device_height / 20),
                   child: Row(
                     children: [
-                      SizedBox(width: device_width / 10),
+                      Text(
+                        "Dr. Sharma",
+                        style: TextStyle(
+                            fontFamily: "Roboto",
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        "Child Specialist",
+                        style: TextStyle(
+                            fontFamily: "Roboto",
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black45),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: deviceHeight / 20,
+                    right: 50.0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(width: deviceWidth / 10),
                       essentialInfo("Patient", "2.2k"),
-                      SizedBox(width: device_width / 10),
+                      SizedBox(width: deviceWidth / 10),
                       essentialInfo("Experience", "3 years"),
-                      SizedBox(width: device_width / 10),
+                      SizedBox(width: deviceWidth / 10),
                       essentialInfo("Ratings", "4.7")
                     ],
                   ),
                 ),
                 SizedBox(
-                  height: device_height / 20,
+                  height: deviceHeight / 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: device_width / 1.3),
+                  padding: EdgeInsets.only(right: deviceWidth / 1.3),
                   child: Text(
                     "About",
                     style: TextStyle(
@@ -96,9 +107,9 @@ class DoctorDetailsPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top:15.0),
+                  padding: EdgeInsets.only(top: 15.0),
                   child: Container(
-                      width: device_width / 1.1,
+                      width: deviceWidth / 1.1,
                       child: Text(
                         "Donec et efficitur massa, sed pulvinar ex. Maecenas et consectetur sem. ",
                         style: TextStyle(fontFamily: "Roboto", fontSize: 18),
@@ -115,8 +126,8 @@ class DoctorDetailsPage extends StatelessWidget {
             decoration: BoxDecoration(
                 border:
                     Border(right: BorderSide(color: Colors.black, width: 2.0))),
-            width: device_width / 2,
-            height: device_height / 20,
+            width: deviceWidth / 2,
+            height: deviceHeight / 17,
             child: RaisedButton(
               color: AppTheme.aqua,
               onPressed: () => print("Appointment Booked"),
@@ -130,8 +141,8 @@ class DoctorDetailsPage extends StatelessWidget {
             ),
           ),
           Container(
-            width: device_width / 2,
-            height: device_height / 20,
+            width: deviceWidth / 2,
+            height: deviceHeight / 17,
             child: RaisedButton(
               color: AppTheme.aqua,
               onPressed: () => print("Consulted Online"),

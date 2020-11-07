@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:medicare/pages/medicine_detail.dart';
 
 class ShopSearch extends StatefulWidget {
   @override
@@ -15,17 +16,8 @@ class _ShopSearchState extends State<ShopSearch> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Color(0xFFE37C54),
-        leading: GestureDetector(
-          onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.only(left: 0.0),
-            child: Icon(Icons.menu),
-          ),
-        ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 70.0),
-          child: Text('Shop Medicines'),
-        ),
+        title: Text('Shop Medicines'),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Stack(
@@ -82,6 +74,7 @@ class _ShopSearchState extends State<ShopSearch> {
           ],
         ),
       ),
+      drawer: Drawer(),
     );
   }
 
@@ -138,99 +131,107 @@ class _ShopSearchState extends State<ShopSearch> {
         top: 10.0,
         bottom: 20.0,
       ),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          color: Colors.grey.shade200,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset(0.0, 7.0),
-              blurRadius: 5.0,
-            ),
-          ],
-        ),
-        width: width,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Column(
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 8.0,
-                      right: 8.0,
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Shop()),
+          );
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: Colors.grey.shade200,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                offset: Offset(0.0, 7.0),
+                blurRadius: 5.0,
+              ),
+            ],
+          ),
+          width: width,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 8.0,
+                        right: 8.0,
+                      ),
+                      child: SvgPicture.asset('assets/images/med.svg'),
                     ),
-                    child: SvgPicture.asset('assets/images/med.svg'),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10.0),
-                        child: Row(
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10.0),
+                          child: Row(
+                            children: <Widget>[
+                              Text(
+                                "Paracetemol Tablets",
+                                style: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            AutoSizeText(
+                              'Fever and Cold',
+                              style: TextStyle(
+                                color: Colors.grey.shade800,
+                                fontSize: 18,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Row(
                           children: <Widget>[
                             Text(
-                              "Paracetemol Tablets",
+                              "Rs. 150",
                               style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
+                                fontFamily: "Roboto",
+                                fontSize: 18.0,
+                                fontStyle: FontStyle.italic,
+                                color: Colors.grey.shade800,
                               ),
                             ),
                           ],
                         ),
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          AutoSizeText(
-                            'Fever and Cold',
-                            style: TextStyle(
-                              color: Colors.grey.shade800,
-                              fontSize: 18,
-                            ),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            "Rs. 150",
-                            style: TextStyle(
-                              fontFamily: "Roboto",
-                              fontSize: 18.0,
-                              fontStyle: FontStyle.italic,
-                              color: Colors.grey.shade800,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  _addtocart(),
-                  _buynow(),
-                ],
-              ),
-              SizedBox(height: 15.0),
-            ],
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    _addtocart(),
+                    _buynow(),
+                  ],
+                ),
+                SizedBox(height: 15.0),
+              ],
+            ),
           ),
         ),
       ),
