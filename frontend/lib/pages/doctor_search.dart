@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:medicare/pages/doctor_details.dart';
 
 class Doctor extends StatefulWidget {
   @override
@@ -14,17 +15,8 @@ class _DoctorState extends State<Doctor> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Color(0xFFE37C54),
-        leading: GestureDetector(
-          onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.only(left: 0.0),
-            child: Icon(Icons.menu),
-          ),
-        ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 90.0),
-          child: Text('Doctor'),
-        ),
+        title: Text('Doctor'),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -36,6 +28,7 @@ class _DoctorState extends State<Doctor> {
           ],
         ),
       ),
+      drawer: Drawer(),
     );
   }
 
@@ -92,122 +85,130 @@ class _DoctorState extends State<Doctor> {
         top: 20.0,
         bottom: 10.0,
       ),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          color: Colors.grey.shade200,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset(0.0, 7.0),
-              blurRadius: 5.0,
-            ),
-          ],
-        ),
-        width: width,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Column(
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 8.0,
-                      right: 8.0,
-                    ),
-                    child: Image.asset(
-                      'assets/images/doctor.png',
-                      height: 100,
-                      width: 100,
-                    ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            "Dr. Sharma",
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          AutoSizeText(
-                            'Child Specialists',
-                            style: TextStyle(
-                              color: Colors.grey.shade800,
-                              fontSize: 18,
-                            ),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            "Credits:",
-                            style: TextStyle(
-                              fontFamily: "Roboto",
-                              fontSize: 18.0,
-                              fontStyle: FontStyle.italic,
-                              color: Colors.grey.shade800,
-                            ),
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.amber[800],
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.amber[800],
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.amber[800],
-                          ),
-                          Icon(
-                            Icons.star_border,
-                          ),
-                          Icon(
-                            Icons.star_border,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                    ],
-                  ),
-                ],
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => DoctorDetailsPage()),
+          );
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: Colors.grey.shade200,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                offset: Offset(0.0, 7.0),
+                blurRadius: 5.0,
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  _appointment(),
-                  SizedBox(
-                    width: 7.0,
-                  ),
-                  _consult(),
-                ],
-              ),
-              SizedBox(height: 15.0),
             ],
+          ),
+          width: width,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 8.0,
+                        right: 8.0,
+                      ),
+                      child: Image.asset(
+                        'assets/images/doctor.png',
+                        height: 100,
+                        width: 100,
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              "Dr. Sharma",
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            AutoSizeText(
+                              'Child Specialists',
+                              style: TextStyle(
+                                color: Colors.grey.shade800,
+                                fontSize: 18,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              "Credits:",
+                              style: TextStyle(
+                                fontFamily: "Roboto",
+                                fontSize: 18.0,
+                                fontStyle: FontStyle.italic,
+                                color: Colors.grey.shade800,
+                              ),
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber[800],
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber[800],
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber[800],
+                            ),
+                            Icon(
+                              Icons.star_border,
+                            ),
+                            Icon(
+                              Icons.star_border,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    _appointment(),
+                    SizedBox(
+                      width: 7.0,
+                    ),
+                    _consult(),
+                  ],
+                ),
+                SizedBox(height: 15.0),
+              ],
+            ),
           ),
         ),
       ),

@@ -12,18 +12,11 @@ class _HospitalState extends State<Hospital> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Color(0xFFE37C54),
-        leading: GestureDetector(
-          onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.only(left: 0.0),
-            child: Icon(Icons.menu),
-          ),
-        ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 90.0),
-          child: Text('Hospital'),
-        ),
+        title: Text('Hospital'),
+        centerTitle: true,
       ),
+      body: SingleChildScrollView(),
+      drawer: Drawer(),
     );
   }
 }

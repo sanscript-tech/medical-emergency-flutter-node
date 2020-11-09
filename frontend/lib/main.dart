@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/pages/bottom_nav.dart';
+import 'package:medicare/pages/dashboard_page.dart';
 import 'package:medicare/pages/drawer.dart';
 import 'routes.dart';
 
@@ -14,9 +14,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: DrawerScreen(),
-      debugShowCheckedModeBanner: false,
-      //initialRoute: Dashboard.dashboardId,
-      routes: routes,
     );
   }
 }
