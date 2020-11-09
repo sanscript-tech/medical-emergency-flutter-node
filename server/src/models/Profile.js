@@ -12,9 +12,16 @@ const userProfileSchema = new mongoose.Schema(
       {
         purchase: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "purchase",
+          ref: "Medicine",
           required: true,
         },
+        quantity:{
+          type: Number,
+          required: true,
+        },
+        date: {
+          type: Date,
+        }
       },
     ],
 
