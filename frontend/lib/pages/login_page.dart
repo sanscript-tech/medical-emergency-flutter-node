@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:medicare/pages/dashboard_page.dart';
 import 'package:medicare/pages/reset_password.dart';
 
 class LoginPage extends StatelessWidget {
@@ -41,7 +42,10 @@ class LoginPage extends StatelessWidget {
 
     Widget _backButton() {
       return InkWell(
-        onTap: () => print("Back Button pressed"),
+        onTap: () => Navigator.pop(
+          context,
+          MaterialPageRoute(builder: (context) => Dashboard()),
+        ),
         child: Container(
             padding: EdgeInsets.only(left: 0, top: 5, bottom: 10),
             child: Icon(
@@ -85,21 +89,31 @@ class LoginPage extends StatelessWidget {
               side: BorderSide(color: Colors.black)),
           color: Color(0xFFFFE6E6),
           onPressed: () => print("Google Sign In"),
-          child: Row(
-            children: [
-              Image.asset(
-                'assets/images/google.png',
-                height: 20.0,
-                width: 20.0,
-              ),
-              SizedBox(
-                width: 40,
-              ),
-              Text(
-                "Sign In with Google",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              )
-            ],
+          child: Padding(
+            padding: const EdgeInsets.only(
+              top: 10.0,
+              bottom: 10.0,
+            ),
+            child: Row(
+              children: [
+                Image.asset(
+                  'assets/images/google.png',
+                  height: 30.0,
+                  width: 30.0,
+                ),
+                SizedBox(
+                  width: 40,
+                ),
+                Text(
+                  "Sign In with Google",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17,
+                    fontFamily: 'Roboto',
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       );
@@ -158,7 +172,7 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 8),
                   GestureDetector(
                     onTap: () => Navigator.pushNamed(
-                        context,ResetPassword.resetPassword),
+                        context, ResetPassword.resetPassword),
                     child: RichText(
                         text: TextSpan(
                       text: "Forgot Password",
@@ -175,6 +189,9 @@ class LoginPage extends StatelessWidget {
                     "or",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
+                  ),
+                  SizedBox(
+                    height: 10.0,
                   ),
                   _googleSignInButton()
                 ],
