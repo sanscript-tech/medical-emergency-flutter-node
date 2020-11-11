@@ -34,21 +34,6 @@ router.post("/login" , async(req,res)=>{
   }
 })
 
-router.get("/profile", async(req,res)=> {
-  try{
-    var users = await UserProfile.find({}, {updatedAt: 0})
-                .populate('userField', {updatedAt: 0, createdAt: 0 , date: 0})
-                .populate('purchases')
-                .populate('doctors')
-                .populate('hospitals')
-                
-    res.send({users})
-  }catch(e){
-    console.log(e)
-    res.status(400).send({ errors: [{msg: e.message}] });
-  }
-})
-
 // @route   GET api/users
 // @desc    Get yourself
 // @access  Private
