@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // routes
 app.use("/api/user", require("./routers/api/userRouter"));
+app.use("/api/profile", require("./routers/api/profileRouter"));
 
 app.get("/", (req, res) => {
   res.send("Api is running");
