@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/pages/login_page.dart';
 
-
 class Dashboard extends StatelessWidget {
-  static final String dashboardId='/dashboard';
-
+  static final String dashboardId = '/dashboard';
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +18,18 @@ class Dashboard extends StatelessWidget {
             elevation: 10.0,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0)),
-            child: Text(
-              "CREATE AN ACCOUNT",
-              style:
-                  TextStyle(fontFamily: "Roboto", fontWeight: FontWeight.bold),
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 10.0,
+                bottom: 10.0,
+              ),
+              child: Text(
+                "CREATE AN ACCOUNT",
+                style: TextStyle(
+                    fontFamily: "Roboto",
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
+              ),
             )),
       );
     }
@@ -32,15 +38,24 @@ class Dashboard extends StatelessWidget {
       return SizedBox(
         width: 250.0,
         child: RaisedButton(
-            onPressed: () => Navigator.pushNamed(context,LoginPage.loginPageId),
+            onPressed: () =>
+                Navigator.pushNamed(context, LoginPage.loginPageId),
             color: Colors.cyan.shade200,
             elevation: 10.0,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0)),
-            child: Text(
-              "ALREADY AN USER? SIGN IN",
-              style:
-                  TextStyle(fontFamily: "Roboto", fontWeight: FontWeight.bold),
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 10.0,
+                bottom: 10.0,
+              ),
+              child: Text(
+                "ALREADY AN USER? SIGN IN",
+                style: TextStyle(
+                    fontFamily: "Roboto",
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
+              ),
             )),
       );
     }
@@ -54,21 +69,31 @@ class Dashboard extends StatelessWidget {
               side: BorderSide(color: Colors.black)),
           color: Color(0xFFFFE6E6),
           onPressed: () => print("Google Sign In"),
-          child: Row(
-            children: [
-              Image.asset(
-                'assets/images/google.png',
-                height: 20.0,
-                width: 20.0,
-              ),
-              SizedBox(
-                width: 40,
-              ),
-              Text(
-                "Sign In with Google",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              )
-            ],
+          child: Padding(
+            padding: const EdgeInsets.only(
+              top: 10.0,
+              bottom: 10.0,
+            ),
+            child: Row(
+              children: [
+                Image.asset(
+                  'assets/images/google.png',
+                  height: 30.0,
+                  width: 30.0,
+                ),
+                SizedBox(
+                  width: 40,
+                ),
+                Text(
+                  "Sign In with Google",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17,
+                    fontFamily: 'Roboto',
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       );
@@ -106,7 +131,10 @@ class Dashboard extends StatelessWidget {
                             "Your one stop solution to all your emergency needs",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 15.0),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15.0,
+                              fontFamily: 'Roboto',
+                            ),
                           ),
                         ),
                         SizedBox(height: 20),

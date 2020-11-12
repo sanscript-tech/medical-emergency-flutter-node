@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/icons/icons.dart';
 import 'package:medicare/pages/medicine_search.dart';
-import 'doctor_details.dart';
 import 'home.dart';
 import 'doctor_search.dart';
 import 'hospital.dart';
@@ -17,7 +16,7 @@ class _BottomNavState extends State<BottomNav> {
   //setting the current index at 0
   int _currentIndex = 0;
   //the order of these widgets should be kept same as the bottom navigation bar
-  final List<Widget> _tabs = [Home(), Hospital(), DoctorDetailsPage(), ShopSearch()];
+  final List<Widget> _tabs = [Home(), Hospital(), Doctor(), ShopSearch()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

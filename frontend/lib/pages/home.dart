@@ -12,18 +12,10 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Color(0xFFE37C54),
-        leading: GestureDetector(
-          onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.only(left: 0.0),
-            child: Icon(Icons.menu),
-          ),
-        ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 100.0),
-          child: Text('Home'),
-        ),
+        title: Text("Home"),
+        centerTitle: true,
       ),
+      drawer: Drawer(),
     );
   }
 }

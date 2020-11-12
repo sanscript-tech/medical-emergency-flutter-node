@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 const auth = require("../../middleware/auth");
 const User = require("../../models/user");
+const UserProfile = require("../../models/Profile");
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
