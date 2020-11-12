@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const UserProfile = require("../../models/Profile");
+const auth = require('../../middleware/auth');
 
 // @route GET api/profile/me
 // @desc Get your own user profile
 // @access Private
 
-router.get("/me", async (req, res) => {
+router.get("/me", auth,async (req, res) => {
   try {
     const userProfile = await UserProfile.findOne({
       _id: req.params.userProfileId,
@@ -14,13 +15,13 @@ router.get("/me", async (req, res) => {
     if (!userProfile) {
       return res.status(400).json({
         status: "fail",
-        message: "No user found",
+        msg: "No user found",
       });
     }
 
     res.status(200).json({
       status: "success",
-      message: "user profile found",
+      msg: "user profile found",
       data: userProfile,
     });
   } catch (error) {
@@ -31,7 +32,7 @@ router.get("/me", async (req, res) => {
       : 500;
     res.status(err_code).json({
       status: "fail",
-      message: error.message || "Internal Server Error",
+      msg: error.message || "Internal Server Error",
     });
   }
 });
