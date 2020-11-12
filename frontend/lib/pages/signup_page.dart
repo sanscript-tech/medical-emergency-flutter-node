@@ -53,17 +53,17 @@ class Signup extends StatelessWidget {
       );
     }
 
-    Widget _loginButton() {
+    Widget _signupButton() {
       return SizedBox(
         width: 150.0,
         child: RaisedButton(
-            onPressed: () => print("Login Button pressed"),
+            onPressed: () => print("Signup Button pressed"),
             color: Colors.cyan.shade200,
             elevation: 10.0,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0)),
             child: Text(
-              "LOGIN",
+              "SIGNUP",
               style:
                   TextStyle(fontFamily: "Roboto", fontWeight: FontWeight.bold),
             )),
@@ -117,7 +117,7 @@ class Signup extends StatelessWidget {
       );
     }
 
-    Widget _emailPasswordWidget() {
+    Widget _formTextfields() {
       return Column(
         children: <Widget>[
           _entryField("Email id"),
@@ -129,75 +129,64 @@ class Signup extends StatelessWidget {
     return Scaffold(
       body: Container(
         height: deviceHeight,
-        child: Stack(children: [
-          Positioned(
-            top: deviceHeight / 10,
-            left: deviceWidth / 15,
-            child: Text(
-              "Welcome Back...",
-              style: TextStyle(fontSize: 25.0),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(height: deviceHeight * .2),
-                  _emailPasswordWidget(),
-                  SizedBox(height: 20),
-                  _loginButton(),
-                  SizedBox(height: 20),
-                  RichText(
-                    text: TextSpan(
-                        text: "Not an user yet?",
-                        style: TextStyle(
-                            fontFamily: "Roboto",
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: " Create an account",
-                              style: TextStyle(
-                                  color: Colors.orange, fontFamily: "Roboto"),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () => print("Create an account"))
-                        ]),
-                  ),
-                  SizedBox(height: 8),
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(
-                        context, ResetPassword.resetPassword),
-                    child: RichText(
-                        text: TextSpan(
-                      text: "Forgot Password",
-                      style: TextStyle(
-                          color: Colors.orange,
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.bold),
-                    )),
-                  ),
-                  SizedBox(height: 20),
-                  _avatar(),
-                  SizedBox(height: 15),
-                  Text(
-                    "or",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  _googleSignInButton()
-                ],
+        child: SingleChildScrollView(
+          child: Stack(children: [
+            Positioned(
+              top: deviceHeight / 10,
+              left: deviceWidth / 15,
+              child: Text(
+                "Welcome to HelloDoc",
+                style: TextStyle(fontSize: 25.0),
               ),
             ),
-          ),
-          Positioned(top: 40, left: 0, child: _backButton()),
-        ]),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(height: deviceHeight * .2),
+                    _formTextfields(),
+                    SizedBox(height: 20),
+                    _signupButton(),
+                    SizedBox(height: 20),
+                    RichText(
+                      text: TextSpan(
+                          text: "Already an user?",
+                          style: TextStyle(
+                              fontFamily: "Roboto",
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: " Login",
+                                style: TextStyle(
+                                    color: Colors.orange, fontFamily: "Roboto"),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () => print("Create an account"))
+                          ]),
+                    ),
+                    SizedBox(height: 20),
+                    _avatar(),
+                    SizedBox(height: 15),
+                    Text(
+                      "or",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 15.0),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    _googleSignInButton()
+                  ],
+                ),
+              ),
+            ),
+            Positioned(top: 40, left: 0, child: _backButton()),
+          ]),
+        ),
       ),
     );
   }
