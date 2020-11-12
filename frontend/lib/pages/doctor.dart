@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:medicare/drawer.dart';
+
 
 class Doctor extends StatefulWidget {
   @override
@@ -11,21 +13,6 @@ class _DoctorState extends State<Doctor> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Color(0xFFE37C54),
-        leading: GestureDetector(
-          onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.only(left: 0.0),
-            child: Icon(Icons.menu),
-          ),
-        ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 90.0),
-          child: Text('Doctor'),
-        ),
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

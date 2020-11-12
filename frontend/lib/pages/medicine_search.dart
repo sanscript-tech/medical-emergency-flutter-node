@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:medicare/drawer.dart';
 import 'package:medicare/pages/medicine_detail.dart';
 
 class ShopSearch extends StatefulWidget {
@@ -13,8 +14,8 @@ class _ShopSearchState extends State<ShopSearch> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      drawer:getDrawer(context),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: Color(0xFFE37C54),
         title: Text('Shop Medicines'),
         centerTitle: true,
@@ -74,7 +75,6 @@ class _ShopSearchState extends State<ShopSearch> {
           ],
         ),
       ),
-      drawer: Drawer(),
     );
   }
 

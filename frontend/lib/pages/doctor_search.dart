@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:medicare/drawer.dart';
 import 'package:medicare/pages/doctor_details.dart';
 
 class Doctor extends StatefulWidget {
@@ -12,8 +13,8 @@ class _DoctorState extends State<Doctor> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      drawer: getDrawer(context),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: Color(0xFFE37C54),
         title: Text('Doctor'),
         centerTitle: true,
@@ -28,7 +29,6 @@ class _DoctorState extends State<Doctor> {
           ],
         ),
       ),
-      drawer: Drawer(),
     );
   }
 
