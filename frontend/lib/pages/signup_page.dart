@@ -120,8 +120,12 @@ class Signup extends StatelessWidget {
     Widget _formTextfields() {
       return Column(
         children: <Widget>[
+          _entryField("Name"),
+          _entryField("Phone No."),
           _entryField("Email id"),
+          _entryField("Address"),
           _entryField("Password", isPassword: true),
+          _entryField("Confirm Password", isPassword: true),
         ],
       );
     }
@@ -179,7 +183,8 @@ class Signup extends StatelessWidget {
                     SizedBox(
                       height: 10.0,
                     ),
-                    _googleSignInButton()
+                    _googleSignInButton(),
+                    SizedBox(height: 20),
                   ],
                 ),
               ),
