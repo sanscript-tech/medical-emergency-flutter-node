@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:medicare/pages/dashboard_page.dart';
-import 'package:medicare/pages/reset_password.dart';
 
 class Signup extends StatelessWidget {
   @override
