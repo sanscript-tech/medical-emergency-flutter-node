@@ -50,7 +50,7 @@ router.delete('/me', auth, async(req,res)=>{
   try{
       await UserProfile.deleteOne({userField: req.user._id})
       await req.user.remove()
-      res.send(req.user);
+      res.send({msg: "Your profile has been deleted successfully", user: req.user});
   }catch(e){
       res.status(400).send(e);
   }
