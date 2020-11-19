@@ -14,7 +14,7 @@ const auth = async (req, res, next) => {
     const decoded = jwt.verify(token, keys.JWT_SECRET);
 
     const user = await User.findOne({
-      _id: decoded.user.id,
+      _id: decoded._id,
     }).select("-password");
 
     if (!user) {
