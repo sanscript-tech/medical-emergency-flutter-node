@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:medicare/pages/doctor side/drawer.dart';
+import 'package:medicare/pages/doctor%20side/doctor_indi.dart';
 
 class DoctorDetails extends StatefulWidget {
   @override
@@ -164,7 +165,12 @@ class _DoctorDetailsState extends State<DoctorDetails> {
         bottom: 10.0,
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => DoctorIndi()),
+          );
+        },
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
