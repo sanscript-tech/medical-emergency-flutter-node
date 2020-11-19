@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/pages/onboarding_carousel.dart';
+
+import 'package:medicare/pages/doctor_details.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Carousel(),
+      home: DoctorDetailsPage(),
     );
   }
 }
