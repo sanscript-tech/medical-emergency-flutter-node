@@ -15,6 +15,8 @@ dependencies:
   transformer_page_view:
   carousel_indicator:
   auto_size_text:
+  flutter_map:
+  latlng: ^0.0.2
 
 dev_dependencies:
   flutter_test:
