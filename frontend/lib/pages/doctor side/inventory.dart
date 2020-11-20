@@ -1,12 +1,14 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../drawer.dart';
 
-class PatientQueue extends StatefulWidget {
+class Inventory extends StatefulWidget {
   @override
-  _PatientQueueState createState() => _PatientQueueState();
+  _InventoryState createState() => _InventoryState();
 }
 
-class _PatientQueueState extends State<PatientQueue> {
+class _InventoryState extends State<Inventory> {
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
@@ -14,7 +16,7 @@ class _PatientQueueState extends State<PatientQueue> {
       drawer: getDrawer(context),
       appBar: AppBar(
         backgroundColor: Color(0xFFE37C54),
-        title: Text('Patient Queue'),
+        title: Text('Inventory'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -23,9 +25,13 @@ class _PatientQueueState extends State<PatientQueue> {
           children: <Widget>[
             _section(deviceWidth),
             _dropdown(deviceWidth),
-            _patient(deviceWidth),
-            _patient(deviceWidth),
-            _patient(deviceWidth),
+            _medicine(deviceWidth),
+            _medicine(deviceWidth),
+            _medicine(deviceWidth),
+            _medicine(deviceWidth),
+            _medicine(deviceWidth),
+            _medicine(deviceWidth),
+            _medicine(deviceWidth),
           ],
         ),
       ),
@@ -36,9 +42,12 @@ class _PatientQueueState extends State<PatientQueue> {
     return Padding(
       padding: const EdgeInsets.only(left: 40.0),
       child: DropdownButton<String>(
-        hint: Text('Department'),
-        items: <String>['General', 'Gyno', 'ENT', 'Heart Specialists']
-            .map((String value) {
+        hint: Text('Select Type'),
+        items: <String>[
+          'Fever and Cold',
+          'Pain Killers',
+          'Gel',
+        ].map((String value) {
           return new DropdownMenuItem<String>(
             value: value,
             child: new Text(value),
@@ -74,7 +83,7 @@ class _PatientQueueState extends State<PatientQueue> {
     );
   }
 
-  //Search Bar
+//Search Bar
   Widget _searchBar() {
     return TextField(
       decoration: new InputDecoration(
@@ -93,8 +102,8 @@ class _PatientQueueState extends State<PatientQueue> {
     );
   }
 
-  //Patient card
-  Widget _patient(double width) {
+//Medicine card
+  Widget _medicine(double width) {
     return Padding(
       padding: const EdgeInsets.only(
         left: 25.0,
@@ -120,6 +129,8 @@ class _PatientQueueState extends State<PatientQueue> {
           child: Padding(
             padding: const EdgeInsets.only(top: 10.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -128,54 +139,44 @@ class _PatientQueueState extends State<PatientQueue> {
                       padding: const EdgeInsets.only(
                         left: 8.0,
                       ),
-                      child: Icon(
-                        Icons.person,
-                        size: 50,
-                      ),
+                      child: SvgPicture.asset('assets/images/med.svg'),
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Patient ID: 110025679",
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              "John Doe",
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        Text(
+                          "Paracetemol",
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         SizedBox(
                           height: 10.0,
                         ),
-                        Row(
-                          children: <Widget>[
-                            Text(
-                              "Status: Visiting Doctor",
-                              style: TextStyle(
-                                fontFamily: "Roboto",
-                                fontSize: 18.0,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.grey.shade800,
-                              ),
-                            ),
-                          ],
+                        AutoSizeText(
+                          'Fever and Cold',
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontSize: 18,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                         SizedBox(
-                          height: 10.0,
+                          height: 5.0,
+                        ),
+                        AutoSizeText(
+                          'Quantity: 105',
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontSize: 18,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(
+                          height: 5.0,
                         ),
                       ],
                     ),

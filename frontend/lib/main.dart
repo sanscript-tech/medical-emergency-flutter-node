@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/pages/doctor%20side/patient_queue.dart';
+import 'package:medicare/pages/doctor%20side/inventory.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PatientQueue(),
+      home: Inventory(),
     );
   }
 }
