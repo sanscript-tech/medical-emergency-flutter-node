@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlng/latlng.dart';
+import 'package:medicare/constants/color.dart';
 
 class AmbulanceLocation extends StatefulWidget {
   @override
@@ -50,6 +51,59 @@ class _AmbulanceLocationState extends State<AmbulanceLocation> {
                     fontFamily: "Roboto",
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0)),
+            SizedBox(
+              height: deviceHeight / 8,
+            ),
+            Text(
+              "Central Hospital  D.K Sankar",
+              style: TextStyle(
+                  fontFamily: "Roboto",
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  decoration: TextDecoration.underline),
+            ),
+            SizedBox(height: deviceHeight / 25),
+            Container(
+              height: deviceHeight / 6,
+              width: deviceWidth / 1.1,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: AppTheme.aqua),
+              child: Center(
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: deviceWidth / 5,
+                    ),
+                    RaisedButton(
+                      onPressed: () => print("Call Again"),
+                      color: Colors.lightGreenAccent,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Text(
+                        "Call Again",
+                        style: TextStyle(
+                            fontFamily: "Roboto", fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    RaisedButton(
+                      onPressed: () => print("Call Again"),
+                      color: Colors.redAccent,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Text(
+                        "Cancel",
+                        style: TextStyle(
+                            fontFamily: "Roboto", fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
