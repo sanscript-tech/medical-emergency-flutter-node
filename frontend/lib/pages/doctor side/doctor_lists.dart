@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:medicare/pages/doctor side/drawer.dart';
-import 'package:medicare/pages/doctor%20side/doctor_indi.dart';
+import 'package:medicare/pages/doctor%20side/doctor_detail.dart';
 
 class DoctorDetails extends StatefulWidget {
   @override
