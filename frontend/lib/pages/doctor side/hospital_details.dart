@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:medicare/constants/color.dart';
 
 class HospitalDetailsDoctor extends StatefulWidget {
   @override
@@ -27,7 +28,124 @@ class _HospitalDetailsDoctorState extends State<HospitalDetailsDoctor> {
                 'assets/images/hospital.svg',
                 height: deviceHeight / 5,
               ),
-              Text("Location Map:"),
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Name:",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+                  ),
+                  Text(
+                    "General Hospital",
+                    style: TextStyle(fontSize: 16.0),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Email:",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+                  ),
+                  Text(
+                    "john.doe@gmail.com",
+                    style: TextStyle(fontSize: 16.0),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Phone Number:",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+                  ),
+                  Text(
+                    "9999999999",
+                    style: TextStyle(fontSize: 16.0),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Address:",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+                  ),
+                  Text(
+                    "15, Yemen Road, Yemen",
+                    style: TextStyle(fontSize: 16.0),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Type:",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+                  ),
+                  Text(
+                    "General Hospital",
+                    style: TextStyle(fontSize: 16.0),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              RaisedButton(
+                onPressed: () => print("Edit Details"),
+                color: AppTheme.aqua,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                child: Text(
+                  "Edit Details",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Location Map:",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 height: deviceHeight / 5,
                 width: deviceWidth / 1.1,
