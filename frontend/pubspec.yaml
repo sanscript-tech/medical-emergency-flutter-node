@@ -12,7 +12,8 @@ dependencies:
   flutter_svg: ^0.19.1
   email_validator: '^1.0.5'
   fluttertoast: ^7.1.1
-  font_awesome_flutter:
+  transformer_page_view:
+  carousel_indicator:
   auto_size_text:
   flutter_map:
   latlng: ^0.0.2
@@ -29,6 +30,11 @@ flutter:
      - assets/images/doc.svg
      - assets/images/med.svg
      - assets/images/hospital.svg
+     - assets/images/onboarding1.png
+     - assets/images/onboarding2.png
+     - assets/images/onboarding3.png
+     - assets/images/onboarding4.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
