@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/pages/bottom_nav.dart';
-import 'package:medicare/pages/dashboard_page.dart';
-import 'package:medicare/pages/doctor%20side/hospital_details.dart';
-
-import 'package:medicare/pages/doctor_details.dart';
-import 'package:medicare/pages/hospital_details.dart';
+import 'package:medicare/pages/doctor%20side/doctor_confirmation.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HospitalDetailsDoctor(),
+      home: DoctorConfirmation(),
     );
   }
 }
